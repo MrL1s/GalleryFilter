@@ -1,79 +1,114 @@
-# gallery-filter
+# Gallery Filter
 
-This template should help get you started developing with Vue 3 in Vite.
+A starter template for building projects with **Vue 3** and **Vite**.
 
-## Recommended IDE Setup
+---
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Recommended IDE
 
-## Type Support for `.vue` Imports in TS
+Use [VSCode](https://code.visualstudio.com/) with the [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) extension.  
+**Note:** Disable Vetur to avoid conflicts.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+---
 
-## Customize configuration
+## Type Support for `.vue` in TypeScript
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+TypeScript does not natively understand `.vue` files.  
+To enable proper type checking:
 
-## Install
+- Replace the `tsc` CLI with [`vue-tsc`](https://www.npmjs.com/package/vue-tsc)
+- Use **Volar** in your editor to make TypeScript aware of `.vue` types.
 
+---
+
+## Vite Configuration
+
+See the [Vite Configuration Reference](https://vite.dev/config/) for customization.
+
+---
+
+## Installation
+
+```bash
 git clone https://github.com/MrL1s/GalleryFilter
+cd GalleryFilter
+npm install
+
+---
 
 ## Project Structure
 
-src\
-  assets/style/main.scss, tailwind.css
-  components\
-    __tests__/GalleryFilter.test.ts //vitest
-    DataCard.vue // data, time, comments
-    GalleryCard.vue // card product
-    GalleryDate.vue // data -> use DataCard.vue
-    GalleryFilter.vue // main section
-    GalleryHeader.vue // header, logo and nav
-    GalleryModal.vue // modal window from card
-    GallerySearch.vue // search in title
-    IconText.vue // svg count, use DataCard.vue
-  composables/useGallery.ts // buisness logic
-  data/image.json // description card
-  pages/HomePage.vue // main page
-  router/index.ts // here add logic new page 
-  types/index.ts // logic return card
-  app.vue
-  main.ts // import style, route, app
+src/
+├─ assets/
+│  ├─ style/main.scss
+│  └─ style/tailwind.css
+├─ components/
+│  ├─ __tests__/GalleryFilter.test.ts       # Vitest
+│  ├─ DataCard.vue                          # data, time, comments
+│  ├─ GalleryCard.vue                        # product card
+│  ├─ GalleryDate.vue                        # date -> uses DataCard.vue
+│  ├─ GalleryFilter.vue                      # main section
+│  ├─ GalleryHeader.vue                      # header, logo, navigation
+│  ├─ GalleryModal.vue                       # modal window from card
+│  ├─ GallerySearch.vue                      # search by title
+│  └─ IconText.vue                           # svg count, uses DataCard.vue
+├─ composables/
+│  └─ useGallery.ts                          # business logic
+├─ data/
+│  └─ image.json                             # card descriptions
+├─ pages/
+│  └─ HomePage.vue                           # main page
+├─ router/
+│  └─ index.ts                               # add logic for new pages
+├─ types/
+│  └─ index.ts                               # card types
+├─ App.vue
+└─ main.ts                                   # import styles, routes, app
 
-postcss.config.mjs // you need add file and add this code -> 
+Also, create a postcss.config.mjs file:
+
 export default {
   plugins: {
     "@tailwindcss/postcss": {},
   },
 }
 
+---
 
 ## Project Setup
 
-```sh
-npm install
-```
+1. Development with Hot-Reload
 
-### Compile and Hot-Reload for Development
+```npm run dev```
 
-```sh
-npm run dev
-```
+2. Build for Production (Type-Check + Minify)
 
-### Type-Check, Compile and Minify for Production
+```npm run build```
 
-```sh
-npm run build
-```
+3. Run Unit Tests with Vitest
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+```npm run test```
 
-```sh
-npm run test
-```
+4. Lint with ESLint
 
-### Lint with [ESLint](https://eslint.org/)
+```npm run lint```
 
-```sh
-npm run lint
-```
+---
+
+Technology Stack
+
+Vue 3
+
+Vite
+
+TypeScript
+
+TailwindCSS
+
+SCSS
+
+Vitest (unit testing)
+
+ESLint
+
+---
