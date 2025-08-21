@@ -14,6 +14,21 @@ TypeScript cannot handle type information for `.vue` imports by default, so we r
 
 See [Vite Configuration Reference](https://vite.dev/config/).
 
+## Project Structure
+
+src\
+  assets/style/main.scss, tailwind.css
+  components\
+    __tests__/GalleryFilter.test.ts //vitest
+    DataCard.vue // data, time, comments
+    GalleryCard.vue // card product
+    GalleryDate.vue // data -> use DataCard.vue
+    GalleryFilter.vue // main section
+    GalleryHeader.vue // header, logo and nav
+    GalleryModal.vue // modal window from card
+    GallerySearch.vue // search in title
+    IconText.vue // svg count, use DataCard.vue
+
 ## Project Setup
 
 ```sh
