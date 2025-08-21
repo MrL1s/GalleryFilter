@@ -14,6 +14,10 @@ TypeScript cannot handle type information for `.vue` imports by default, so we r
 
 See [Vite Configuration Reference](https://vite.dev/config/).
 
+## Install
+
+git clone https://github.com/MrL1s/GalleryFilter
+
 ## Project Structure
 
 src\
@@ -28,6 +32,21 @@ src\
     GalleryModal.vue // modal window from card
     GallerySearch.vue // search in title
     IconText.vue // svg count, use DataCard.vue
+  composables/useGallery.ts // buisness logic
+  data/image.json // description card
+  pages/HomePage.vue // main page
+  router/index.ts // here add logic new page 
+  types/index.ts // logic return card
+  app.vue
+  main.ts // import style, route, app
+
+postcss.config.mjs // you need add file and add this code -> 
+export default {
+  plugins: {
+    "@tailwindcss/postcss": {},
+  },
+}
+
 
 ## Project Setup
 
