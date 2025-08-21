@@ -1,0 +1,14 @@
+// Глобальные переменные
+$primary-color: #1e40af;
+$secondary-color: #2563eb;
+$bg-color: #f3f4f6;
+$text-color: #111827;
+
+// Пример глобальных стилей
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: $bg-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
